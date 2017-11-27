@@ -1,0 +1,62 @@
+=>Get Element by Matching the Value of the [id] Attribute
+var elem = document.getElementById("xyz");
+elem.style.color="red";
+
+=>Get Elements by Tag Name
+var list = document.getElementsByTagName("p"); // get all p elements
+list.length;
+list[0].style.color = "red";
+
+=>Get Elements by Matching the Value of the [class] Attribute
+var list = document.getElementsByClassName("abc");
+list[0].style.color = "red";
+
+=>Get Elements by Matching the Value of the [name] Attribute
+var xyz = document.getElementsByName("xyz");
+xyz[0].style.color="red";
+
+=>Get Elements using CSS Selector Syntax
+var xx = document.querySelectorAll("span.a, span.c");
+for (var i = 0; i < xx.length; i++) {
+    xx[i].style.color="red";
+}
+
+=>To Submit form 
+document.getElementById("myForm").submit();
+
+=>add backslash on user input value using regex
+var str= document.getElementById('name').value;
+str = str.replace(/['"]/gi,function(matchedtext){
+return "\\"+matchedtext;
+}
+
+=>Ajax Request Javascript
+var xhttp = new XMLHttpRequest();
+  
+xhttp.onreadystatechange = function() {
+    
+	if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+    
+};
+  
+xhttp.open("GET", "ajax_info.txt", true);
+xhttp.send();
+
+
+//Email validation
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+
+
+
+
